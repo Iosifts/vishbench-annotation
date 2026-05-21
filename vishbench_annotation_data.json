@@ -1,0 +1,612 @@
+{
+  "dataset": "VishBench-Syn v0.1",
+  "n_clips": 150,
+  "task": "Classify each phone-call transcript as SAFE, SUSPICIOUS, or LIKELY_VISHING.",
+  "label_definitions": {
+    "SAFE": "Normal call, no social-engineering risk.",
+    "SUSPICIOUS": "Contains pressure, urgency, authority impersonation, or unusual instructions, but no direct request for credentials, money, or remote access.",
+    "LIKELY_VISHING": "Asks for sensitive credentials, one-time codes, card details, remote access, money transfer, crypto, gift cards, or secrecy."
+  },
+  "clips": [
+    {
+      "id": "S01_SAFE_001",
+      "transcript": "Hello, this is a reminder from Greenfield Bank. Your appointment at the Main Street branch is confirmed for Thursday at ten thirty. Please bring a valid photo ID. You do not need to share any account details over the phone. Thank you, and have a good day."
+    },
+    {
+      "id": "S01_SAFE_002",
+      "transcript": "Good afternoon. This is Greenfield Bank calling to let you know that your new debit card has been mailed to the address on file. It should arrive within five to seven business days. If you have questions, please visit your nearest branch. Goodbye."
+    },
+    {
+      "id": "S01_SAFE_003",
+      "transcript": "Hi, this is a courtesy call from Greenfield Bank. Your monthly statement is now available in your online banking portal. You can review it at your convenience. No action is needed on your part. Thank you."
+    },
+    {
+      "id": "S01_SAFE_004",
+      "transcript": "Hello. We are calling from Greenfield Bank to confirm that the direct deposit you set up has been activated. Your next payroll deposit will be processed automatically. If you did not request this, please visit your branch. Have a great day."
+    },
+    {
+      "id": "S01_SAFE_005",
+      "transcript": "Good morning, this is Greenfield Bank. We wanted to let you know that our Main Street branch will have adjusted hours next week due to a public holiday. We will be open from nine to one on Monday. Regular hours resume Tuesday. Thank you."
+    },
+    {
+      "id": "S01_SUSP_001",
+      "transcript": "This is the fraud prevention department at Greenfield Bank. We have detected unusual activity on your account. It is very important that you stay on the line so we can verify your identity. Please do not hang up."
+    },
+    {
+      "id": "S01_SUSP_002",
+      "transcript": "Good afternoon. This is a priority call from your bank's security team. There has been a suspicious login attempt on your account from an unrecognized device. We need to walk you through some security steps right now to protect your funds."
+    },
+    {
+      "id": "S01_SUSP_003",
+      "transcript": "Hello, this is the Greenfield Bank security center. We are calling because your account may have been compromised. If we do not resolve this today, we may need to temporarily freeze your account. Please follow the instructions carefully."
+    },
+    {
+      "id": "S01_SUSP_004",
+      "transcript": "Attention. This is an automated security alert from Greenfield Bank. A large transaction is pending on your account. If you did not authorize this, press one immediately. Do not ignore this call, as your account may be at risk."
+    },
+    {
+      "id": "S01_SUSP_005",
+      "transcript": "Hi, I am calling from Greenfield Bank. We noticed some irregularities in your recent transactions. This is a time-sensitive matter. I need you to confirm a few details so we can secure your account before end of business today."
+    },
+    {
+      "id": "S01_VISH_001",
+      "transcript": "This is the Greenfield Bank security department. We have detected an unauthorized transaction of two thousand euros on your account. To cancel it immediately, I need you to read me the six-digit verification code that was just sent to your phone."
+    },
+    {
+      "id": "S01_VISH_002",
+      "transcript": "Hello, this is Greenfield Bank fraud prevention. Your account is being accessed right now by an unauthorized party. To stop this, I need your online banking password so we can lock the account from our end. Please tell me your password now."
+    },
+    {
+      "id": "S01_VISH_003",
+      "transcript": "Urgent call from Greenfield Bank. A wire transfer of five thousand euros is being processed from your account. To block this transfer, please provide your full card number and the three-digit security code on the back. We need this immediately."
+    },
+    {
+      "id": "S01_VISH_004",
+      "transcript": "This is the security team at Greenfield Bank. We need to install a remote protection tool on your computer to scan for malware that is draining your account. Please go to your computer and download the program I will direct you to. Do not tell anyone about this process."
+    },
+    {
+      "id": "S01_VISH_005",
+      "transcript": "Hello, I am from the Greenfield Bank security division. For your safety, we are transferring your funds to a secure holding account. I will need your PIN and your online banking login so we can process this transfer before the attackers move your money."
+    },
+    {
+      "id": "S02_SAFE_001",
+      "transcript": "Hello, this is QuickPost delivery service. Your package is scheduled for delivery tomorrow between two and five PM. Someone will need to be home to sign for it. If this time does not work, you can reschedule online. Thank you."
+    },
+    {
+      "id": "S02_SAFE_002",
+      "transcript": "Hi there. This is QuickPost calling to confirm that your parcel has been delivered to your front door. If you have not received it, please check with your neighbors or contact our support line. Have a nice day."
+    },
+    {
+      "id": "S02_SAFE_003",
+      "transcript": "Good morning. This is QuickPost delivery. We attempted to deliver your package today but no one was home. The parcel is now at your local pickup point at the post office on Oak Street. You can collect it any time this week."
+    },
+    {
+      "id": "S02_SAFE_004",
+      "transcript": "Hello, this is a notification from QuickPost. Your package with tracking number ending in four seven two is currently in transit and expected to arrive by Friday. No action is needed. Thank you for using QuickPost."
+    },
+    {
+      "id": "S02_SAFE_005",
+      "transcript": "Good afternoon. QuickPost here. Just a quick update: the item you returned has been received at our warehouse. Your refund will be processed within three to five business days. If you have questions, visit our website. Goodbye."
+    },
+    {
+      "id": "S02_SUSP_001",
+      "transcript": "Hello, this is QuickPost urgent delivery department. There is a problem with your package. It has been flagged by customs and will be returned to sender unless you take action immediately. Please stay on the line for instructions."
+    },
+    {
+      "id": "S02_SUSP_002",
+      "transcript": "This is QuickPost. We are calling because there is an unpaid customs fee on your package. If this is not resolved today, the parcel will be destroyed. I need you to follow some steps to get this sorted out right away."
+    },
+    {
+      "id": "S02_SUSP_003",
+      "transcript": "Attention. This is a priority call from QuickPost international shipping. Your package has been held at the border. There is an issue with the address. You must update your details now or the shipment will be returned. Do not delay."
+    },
+    {
+      "id": "S02_SUSP_004",
+      "transcript": "Hi, this is QuickPost customer service. We have tried to deliver your parcel three times and there is now a storage fee accumulating. If you do not arrange redelivery today, there may be additional charges. Please follow my instructions."
+    },
+    {
+      "id": "S02_SUSP_005",
+      "transcript": "Good afternoon. I am calling from QuickPost security team. Your package has been intercepted because it triggered a security check. We need to verify your identity urgently to release it. Please do not hang up."
+    },
+    {
+      "id": "S02_VISH_001",
+      "transcript": "This is QuickPost. Your package is being held and there is an outstanding customs fee of forty-nine euros. To pay this and release your parcel, I need your full card number, expiry date, and the three-digit code on the back of your card."
+    },
+    {
+      "id": "S02_VISH_002",
+      "transcript": "Hello, QuickPost shipping department. To release your detained package, we need to verify your identity. Please read me the one-time code that was just sent to your mobile phone so we can proceed with the release."
+    },
+    {
+      "id": "S02_VISH_003",
+      "transcript": "This is an urgent call from QuickPost. There is a problem with your parcel and you must pay a redelivery fee of twenty euros using a prepaid gift card. Please go to the nearest store, purchase a twenty-euro gift card, and read me the code."
+    },
+    {
+      "id": "S02_VISH_004",
+      "transcript": "Attention. Your QuickPost account has been locked due to suspicious activity. To unlock it and receive your package, I need your account password and the email address associated with your account. Please provide these now."
+    },
+    {
+      "id": "S02_VISH_005",
+      "transcript": "Hello, this is QuickPost technical support. We are having a system issue and need to access your computer remotely to update your delivery preferences. Please download the remote access tool from the link I will send you. Do not share this with anyone."
+    },
+    {
+      "id": "S03_SAFE_001",
+      "transcript": "Hi, this is the IT help desk at your company. We are calling to let you know that scheduled maintenance will take place this Saturday from ten PM to six AM. You may experience brief interruptions to email and VPN. No action is required on your end."
+    },
+    {
+      "id": "S03_SAFE_002",
+      "transcript": "Hello, this is IT support. Your new laptop has arrived and is ready for setup. Please come by the IT office on the third floor any time this week to pick it up. We will help you transfer your files during the appointment."
+    },
+    {
+      "id": "S03_SAFE_003",
+      "transcript": "Good morning. IT department here. We have completed the software update on your workstation. Everything should be running normally. If you notice any issues, please submit a ticket through the support portal. Thank you."
+    },
+    {
+      "id": "S03_SAFE_004",
+      "transcript": "Hi, this is a reminder from IT services. Your company password will expire in seven days. Please update it through the self-service portal before it expires. Instructions are on the intranet. Do not share your new password with anyone, including IT staff."
+    },
+    {
+      "id": "S03_SAFE_005",
+      "transcript": "Hello, IT support here. The printer on the second floor has been repaired and is back online. You can now send print jobs as usual. If you encounter any further paper jams, please call the help desk. Have a great day."
+    },
+    {
+      "id": "S03_SUSP_001",
+      "transcript": "Hello, this is Microsoft technical support. We have detected a critical security threat on your computer. Your system is sending out virus alerts and we need to help you fix this right now. Please stay on the line and follow my instructions carefully."
+    },
+    {
+      "id": "S03_SUSP_002",
+      "transcript": "Good afternoon. I am calling from your company's IT security team. We have identified unauthorized access to your workstation. This is very urgent. I need you to go to your computer immediately so I can walk you through the steps to secure it."
+    },
+    {
+      "id": "S03_SUSP_003",
+      "transcript": "This is Windows support services. Your computer has been flagged for unusual network activity. If we do not address this today, your system may be permanently compromised. Please do not ignore this warning."
+    },
+    {
+      "id": "S03_SUSP_004",
+      "transcript": "Hello. I am from the IT department. We are seeing errors coming from your machine. This could be a sign of a data breach. We need to act fast to prevent your files from being encrypted. Can you go to your computer right now?"
+    },
+    {
+      "id": "S03_SUSP_005",
+      "transcript": "Hi, this is the IT security team. We noticed your antivirus license has expired and your system is now vulnerable. You need to renew it today to stay compliant with company policy. I will guide you through the process."
+    },
+    {
+      "id": "S03_VISH_001",
+      "transcript": "This is Microsoft support. Your computer is infected with a dangerous virus. I need you to open the start menu and type in a web address I will give you to download a remote support tool. This will let me fix the problem from my end. Please do not tell your colleagues about this security issue."
+    },
+    {
+      "id": "S03_VISH_002",
+      "transcript": "Hello, this is IT support. To verify your identity and remove the threat from your computer, I need your Windows login username and password. Please provide them now so I can log in remotely and clean the infection."
+    },
+    {
+      "id": "S03_VISH_003",
+      "transcript": "I am calling from Windows technical department. Your security license has expired and you need to pay a renewal fee of two hundred euros. I can process this over the phone if you give me your credit card number and security code."
+    },
+    {
+      "id": "S03_VISH_004",
+      "transcript": "This is urgent. Your company network is under attack. I am from IT security. I need you to go to your computer right now and install AnyDesk so I can secure your machine. Here is the download link. Please do this immediately and do not contact anyone else about this."
+    },
+    {
+      "id": "S03_VISH_005",
+      "transcript": "Hello, I am from technical support. We have locked your computer because of a virus. To unlock it, you need to purchase a three-hundred-euro Google Play gift card and read me the code on the back. This is the only way to restore your system."
+    },
+    {
+      "id": "S04_SAFE_001",
+      "transcript": "Hello, this is a reminder from the Federal Tax Office. The deadline for submitting your annual tax return is June thirtieth. You can file online through the official tax portal or by mail. If you have questions, please visit our website or call during office hours."
+    },
+    {
+      "id": "S04_SAFE_002",
+      "transcript": "Good morning. This is the local revenue office. We are calling to let you know that your tax refund has been processed and will be deposited into the bank account on file within ten business days. No further action is needed."
+    },
+    {
+      "id": "S04_SAFE_003",
+      "transcript": "Hi, this is the tax office. Your appointment with our tax advisor has been scheduled for next Wednesday at two PM. Please bring your income documents and receipts. The office is located at one twenty Main Street, second floor."
+    },
+    {
+      "id": "S04_SAFE_004",
+      "transcript": "Hello. This is a courtesy call from the Federal Tax Office. We have updated our online portal. If you filed electronically last year, please log in and verify that your contact information is up to date. Thank you."
+    },
+    {
+      "id": "S04_SAFE_005",
+      "transcript": "Good afternoon. The municipal tax office is calling to inform you that property tax assessments for this year have been mailed. If you do not receive yours within two weeks, please contact our office during business hours."
+    },
+    {
+      "id": "S04_SUSP_001",
+      "transcript": "This is the Federal Tax Authority. We are calling because there is a discrepancy in your most recent tax filing. This is a serious matter that must be resolved today. If you do not cooperate, your case will be escalated to the enforcement division."
+    },
+    {
+      "id": "S04_SUSP_002",
+      "transcript": "Attention. This is an automated message from the Internal Revenue Service. Your tax account shows an outstanding balance. Failure to respond to this call today may result in penalties and legal action. Press one to speak with an agent."
+    },
+    {
+      "id": "S04_SUSP_003",
+      "transcript": "Hello, I am a senior officer from the tax fraud investigation department. We have flagged your tax return for further review. You are required to cooperate immediately. Please do not contact a lawyer until we have finished our preliminary assessment."
+    },
+    {
+      "id": "S04_SUSP_004",
+      "transcript": "Good afternoon. This is the Federal Tax Office. There has been an error in your tax return that has resulted in an overpayment to you. We need to resolve this today to avoid interest charges. Please stay on the line."
+    },
+    {
+      "id": "S04_SUSP_005",
+      "transcript": "This is the government revenue department. Your social insurance contributions are under review. If the issue is not addressed within twenty-four hours, your social insurance number may be suspended. Follow my instructions carefully."
+    },
+    {
+      "id": "S04_VISH_001",
+      "transcript": "This is the Federal Tax Authority. You owe three thousand euros in back taxes. If you do not pay immediately, a warrant will be issued for your arrest. You can settle this right now by purchasing gift cards totaling three thousand euros and reading the codes to me."
+    },
+    {
+      "id": "S04_VISH_002",
+      "transcript": "Hello, this is the tax office. To process your refund of one thousand two hundred euros, we need to verify your bank account. Please provide your full bank account number, sort code, and the name on the account right now."
+    },
+    {
+      "id": "S04_VISH_003",
+      "transcript": "I am calling from the tax fraud department. Your identity has been used to file a fraudulent return. To protect yourself, I need your social insurance number and date of birth right now so we can flag your account."
+    },
+    {
+      "id": "S04_VISH_004",
+      "transcript": "This is the Internal Revenue Service. You have an outstanding tax debt and your bank accounts will be frozen within the hour. To stop this, transfer the balance to our secure government holding account. I will give you the wire transfer details now."
+    },
+    {
+      "id": "S04_VISH_005",
+      "transcript": "Hello, I am Officer Reynolds from the tax enforcement division. We are conducting an audit remotely. I need you to install a program on your computer so I can view your tax documents. Please download the software at the link I will text you now. This is confidential."
+    },
+    {
+      "id": "S05_SAFE_001",
+      "transcript": "Hi, this is the Valley Medical Center. We are calling to remind you that your appointment with Doctor Chen is tomorrow at three PM. Please arrive fifteen minutes early to complete your paperwork. If you need to reschedule, call us back. Thank you."
+    },
+    {
+      "id": "S05_SAFE_002",
+      "transcript": "Good morning. This is your health insurance provider. We wanted to let you know that your annual policy renewal has been processed. Your new insurance card will be mailed to you this week. No action is required."
+    },
+    {
+      "id": "S05_SAFE_003",
+      "transcript": "Hello, this is Valley Medical Center. Your lab results are ready. Please schedule a follow-up appointment with your doctor to review them. You can call us or book online. We do not share results over the phone. Have a good day."
+    },
+    {
+      "id": "S05_SAFE_004",
+      "transcript": "Hi, this is a reminder from your pharmacy. Your prescription refill is ready for pickup. The pharmacy is open until eight PM today. If you have questions about your medication, please speak with the pharmacist. Thank you."
+    },
+    {
+      "id": "S05_SAFE_005",
+      "transcript": "Good afternoon. This is your insurance company. We are calling to confirm that the claim you submitted last month has been approved. Payment will be sent to your doctor's office directly. No payment from you is needed at this time."
+    },
+    {
+      "id": "S05_SUSP_001",
+      "transcript": "This is the national health insurance administration. Your insurance coverage is about to expire and you will lose all benefits unless you reactivate it today. Please stay on the line. This is extremely urgent and cannot wait."
+    },
+    {
+      "id": "S05_SUSP_002",
+      "transcript": "Hello, I am calling from the health department. Your medical records show an issue that needs immediate attention. If this is not resolved today, your insurance claim will be denied. You need to cooperate with our verification process right now."
+    },
+    {
+      "id": "S05_SUSP_003",
+      "transcript": "Good afternoon. This is your insurance provider's fraud division. Someone may have used your insurance ID to file false claims. We need to act quickly to protect your account. Do not contact your doctor's office about this yet."
+    },
+    {
+      "id": "S05_SUSP_004",
+      "transcript": "Attention. This is Medicare services. Your Medicare number has been compromised. If you do not verify your account today, your benefits will be suspended. Follow the instructions I am about to give you carefully."
+    },
+    {
+      "id": "S05_SUSP_005",
+      "transcript": "Hi, this is an urgent call from the hospital billing department. There is an overdue balance on your account that must be paid today or it will go to collections. I need to walk you through the payment options right now."
+    },
+    {
+      "id": "S05_VISH_001",
+      "transcript": "This is the national health insurance office. To renew your coverage before it expires tonight, we need your full date of birth, social insurance number, and the last four digits of your bank account. I will process the renewal right away."
+    },
+    {
+      "id": "S05_VISH_002",
+      "transcript": "Hello, I am calling from Medicare. Your new insurance card is ready, but to activate it I need you to read me the verification code we just sent to your phone. Without this code, your old card will stop working tomorrow."
+    },
+    {
+      "id": "S05_VISH_003",
+      "transcript": "This is the hospital billing department. You have a balance of eight hundred euros that must be paid now to avoid legal action. Please give me your credit card number and I will process the payment immediately over the phone."
+    },
+    {
+      "id": "S05_VISH_004",
+      "transcript": "Hello, this is the health department. We are conducting a public health audit and need remote access to your computer to verify your vaccination records. Please install TeamViewer and give me the access code. This is mandatory and must be done today."
+    },
+    {
+      "id": "S05_VISH_005",
+      "transcript": "I am from the insurance fraud investigation unit. Your account has been flagged. To clear your name, you need to transfer a security deposit of five hundred euros to our verification account. I will give you the account details now. Do not discuss this with anyone."
+    },
+    {
+      "id": "S06_SAFE_001",
+      "transcript": "Hi, this is NetConnect mobile services. We are calling to let you know that your phone plan has been renewed for another twelve months. Your monthly rate stays the same. If you have any questions, feel free to visit our store or call us. Thank you."
+    },
+    {
+      "id": "S06_SAFE_002",
+      "transcript": "Good afternoon, this is NetConnect. We wanted to inform you that network maintenance in your area will take place this weekend. You may experience short service interruptions between midnight and six AM on Saturday. We apologize for the inconvenience."
+    },
+    {
+      "id": "S06_SAFE_003",
+      "transcript": "Hello. This is NetConnect customer service. Your request to add international roaming to your plan has been processed. It will be active within twenty-four hours. Standard roaming charges will apply. Have a nice trip."
+    },
+    {
+      "id": "S06_SAFE_004",
+      "transcript": "Hi, this is a reminder from NetConnect. Your current phone contract is ending next month. If you would like to review upgrade options, please visit our website or call our sales line. There is no rush and no obligation. Thank you."
+    },
+    {
+      "id": "S06_SAFE_005",
+      "transcript": "Good morning. NetConnect here. The data overage charge on your last bill has been reversed as a one-time courtesy. Your updated bill will be available in your online account within two business days. Thanks for being a loyal customer."
+    },
+    {
+      "id": "S06_SUSP_001",
+      "transcript": "This is NetConnect security department. Someone has requested a SIM swap on your phone number. If this was not you, you need to act immediately or your number will be transferred. Please stay on the line."
+    },
+    {
+      "id": "S06_SUSP_002",
+      "transcript": "Attention. We are calling from NetConnect fraud prevention. Your account has been flagged for unauthorized access. Your phone service may be disconnected within the hour if this is not resolved. Follow my instructions to protect your account."
+    },
+    {
+      "id": "S06_SUSP_003",
+      "transcript": "Hello, this is NetConnect billing department. There is an overdue payment on your account. If you do not settle this today, your phone line will be suspended and a late fee will be applied. I need your attention right now."
+    },
+    {
+      "id": "S06_SUSP_004",
+      "transcript": "Hi, I am calling from NetConnect. We have detected unusual data usage on your account, possibly from a compromised device. This could result in a very large bill. We need to verify your account right away before we can investigate further."
+    },
+    {
+      "id": "S06_SUSP_005",
+      "transcript": "Good afternoon. This is NetConnect security. Your voicemail has been accessed from an unknown location. For your safety, you should change your voicemail PIN as soon as possible. I will guide you through the process now."
+    },
+    {
+      "id": "S06_VISH_001",
+      "transcript": "This is NetConnect. To stop the SIM swap and secure your number, I need you to confirm your identity. Please read me the six-digit code that was just sent to your phone. I need it right now before the transfer goes through."
+    },
+    {
+      "id": "S06_VISH_002",
+      "transcript": "Hello, NetConnect fraud department. Your account is being attacked. To lock your account, I need your account password and the last four digits of the card on file. Please provide these immediately so we can protect you."
+    },
+    {
+      "id": "S06_VISH_003",
+      "transcript": "This is an urgent call from NetConnect. Your overdue balance is two hundred euros. To prevent disconnection, you need to pay right now using a prepaid voucher. Please go to a shop, buy a two-hundred-euro voucher, and call me back with the code."
+    },
+    {
+      "id": "S06_VISH_004",
+      "transcript": "I am from NetConnect technical support. There is a configuration problem with your device that requires remote access. Please install AnyDesk on your phone and share the connection code with me. Do not mention this to anyone as it involves a security vulnerability."
+    },
+    {
+      "id": "S06_VISH_005",
+      "transcript": "This is NetConnect. A new device was registered on your account without your permission. To remove it and secure your account, please provide your full name, date of birth, account PIN, and the last four digits of your payment card."
+    },
+    {
+      "id": "S07_SAFE_001",
+      "transcript": "Hi, this is human resources. We are calling to remind you that the benefits enrollment period ends next Friday. Please review the options on the HR portal and make your selections before the deadline. If you need help, stop by the HR office."
+    },
+    {
+      "id": "S07_SAFE_002",
+      "transcript": "Good morning. This is the payroll department. We wanted to confirm that your direct deposit information has been updated as requested. Your next paycheck will go to the new account. If you did not request this change, please contact us immediately."
+    },
+    {
+      "id": "S07_SAFE_003",
+      "transcript": "Hello, this is HR. Your annual performance review has been scheduled for next Tuesday at eleven AM with your manager. Please prepare any materials you would like to discuss. The meeting will be in conference room B."
+    },
+    {
+      "id": "S07_SAFE_004",
+      "transcript": "Hi, this is the HR department. We are calling to let you know that the company holiday party is on December fifteenth. Please RSVP through the link in your email by this Friday. We hope to see you there."
+    },
+    {
+      "id": "S07_SAFE_005",
+      "transcript": "Good afternoon. This is payroll. Your expense reimbursement of three hundred and fifty euros has been approved and will be included in your next paycheck. No further action is needed on your part. Thank you."
+    },
+    {
+      "id": "S07_SUSP_001",
+      "transcript": "Hello, this is human resources. There is an urgent issue with your payroll that must be resolved before end of business today. If we cannot verify your details, your next paycheck may be delayed. Please give me your full attention now."
+    },
+    {
+      "id": "S07_SUSP_002",
+      "transcript": "This is the HR compliance team. We are conducting an emergency audit and your records are incomplete. You must update your information today or you could face disciplinary action. I need to walk you through the process now."
+    },
+    {
+      "id": "S07_SUSP_003",
+      "transcript": "Good morning. I am calling from the CEO's office. The CEO has personally asked me to contact you about a confidential project. I cannot share all the details yet, but I need you to be available and responsive today. Do not discuss this with your team."
+    },
+    {
+      "id": "S07_SUSP_004",
+      "transcript": "Hello, this is the finance department. We have detected an error in your tax withholdings that could result in a large tax bill at the end of the year. We need to correct this immediately. Please call me back as soon as possible."
+    },
+    {
+      "id": "S07_SUSP_005",
+      "transcript": "Hi, I am from the IT security team at your company. Someone may have accessed the HR system using your credentials. Do not log in to any company systems until we clear this up. I will send you instructions shortly."
+    },
+    {
+      "id": "S07_VISH_001",
+      "transcript": "This is the payroll department. There was an overpayment in your last check. To process the correction, I need your bank account number, routing number, and online banking password so we can reverse the transaction. Please provide these now."
+    },
+    {
+      "id": "S07_VISH_002",
+      "transcript": "Hello, I am calling on behalf of the CEO. He needs you to purchase five hundred euros in gift cards for a client meeting today. This is urgent and confidential. Buy the cards, scratch off the codes, and send me photos of the backs. Do not tell anyone."
+    },
+    {
+      "id": "S07_VISH_003",
+      "transcript": "Hi, this is HR. We are updating our payroll system and need you to verify your social insurance number, date of birth, and bank details over the phone right now. If we do not get this by end of day, your pay will be frozen."
+    },
+    {
+      "id": "S07_VISH_004",
+      "transcript": "This is the finance department. The CEO has authorized an urgent wire transfer to a new vendor. I need you to process a transfer of ten thousand euros to this account number right now. This is top priority and highly confidential."
+    },
+    {
+      "id": "S07_VISH_005",
+      "transcript": "Hello, this is IT support. We need to access your computer remotely to fix a payroll software issue. Please install AnyDesk and share your screen with me. I also need your company login credentials so I can test the fix."
+    },
+    {
+      "id": "S08_SAFE_001",
+      "transcript": "Hi, this is ShopSafe marketplace. We are calling to confirm that your item has been listed successfully. Interested buyers can now see it. You will receive a notification when someone makes an offer. Good luck with your sale."
+    },
+    {
+      "id": "S08_SAFE_002",
+      "transcript": "Hello, this is ShopSafe customer support. Your return request has been approved. Please ship the item back using the prepaid label we emailed you. Your refund will be processed within five business days of receiving the return."
+    },
+    {
+      "id": "S08_SAFE_003",
+      "transcript": "Good morning. This is ShopSafe marketplace. The item you purchased has been shipped. Your estimated delivery date is next Wednesday. You can track the package using the link in your email. Thank you for shopping with us."
+    },
+    {
+      "id": "S08_SAFE_004",
+      "transcript": "Hi. ShopSafe here. We noticed you left an item in your cart. Just a friendly reminder that it is still available. No pressure, but if you want to complete the purchase, you can do so on our website any time. Have a nice day."
+    },
+    {
+      "id": "S08_SAFE_005",
+      "transcript": "Hello, this is ShopSafe. Your seller account verification is complete. You can now list up to fifty items per month. If you need to increase your limit, apply through the seller portal. Welcome aboard."
+    },
+    {
+      "id": "S08_SUSP_001",
+      "transcript": "Hello, I am a buyer on ShopSafe and I am very interested in your item, but I am having trouble with the payment system. Can we handle this outside the platform? I can pay you directly. I promise it will be easier for both of us."
+    },
+    {
+      "id": "S08_SUSP_002",
+      "transcript": "Hi, this is ShopSafe support. Your seller account has been temporarily restricted because of a complaint from a buyer. If you do not respond within twenty-four hours, your account will be permanently suspended. Please follow our instructions."
+    },
+    {
+      "id": "S08_SUSP_003",
+      "transcript": "This is ShopSafe. A buyer has reported that they did not receive the item you sold. Your payment is on hold. If you do not provide proof of shipment today, the funds will be returned to the buyer and your account may be closed."
+    },
+    {
+      "id": "S08_SUSP_004",
+      "transcript": "Hello, I bought something from you on ShopSafe but there is a problem. I need you to contact me outside the app to resolve this. I am a very busy person and I do not want to wait for the dispute process. Can we sort this out directly?"
+    },
+    {
+      "id": "S08_SUSP_005",
+      "transcript": "Good afternoon. This is ShopSafe security. We have detected an attempt to hack your seller account. Your earnings may be at risk. We are escalating this and need your cooperation right now to prevent further damage."
+    },
+    {
+      "id": "S08_VISH_001",
+      "transcript": "Hi, I am a buyer from ShopSafe. I have sent the payment but the system is not showing it. To verify, I need you to click on a link I will send you and enter your login credentials. Then the payment should appear in your account."
+    },
+    {
+      "id": "S08_VISH_002",
+      "transcript": "This is ShopSafe security. Your account has been compromised. To restore access, I need your account password and the two-factor authentication code from your phone. Please provide them now so we can lock out the intruder."
+    },
+    {
+      "id": "S08_VISH_003",
+      "transcript": "Hello, I want to buy your item but I am overseas. I will pay extra for shipping. I have already arranged a courier but they need a processing fee of fifty euros from you. Please send it via wire transfer to this account and I will reimburse you."
+    },
+    {
+      "id": "S08_VISH_004",
+      "transcript": "This is ShopSafe. Your payout has failed because your payment information is outdated. To receive your earnings, please provide your full card number, expiry date, and CVV over the phone so we can update your account."
+    },
+    {
+      "id": "S08_VISH_005",
+      "transcript": "Hi, this is ShopSafe verification team. A buyer has overpaid for your item by two hundred euros. To refund the difference, please transfer two hundred euros to the following crypto wallet address. We will settle the rest through the platform."
+    },
+    {
+      "id": "S09_SAFE_001",
+      "transcript": "Hey, it is me. I just wanted to let you know that grandma is doing well after her appointment today. The doctor said everything looks fine and she does not need to come back for another six months. Talk to you later."
+    },
+    {
+      "id": "S09_SAFE_002",
+      "transcript": "Hi, calling to check in. Mom asked me to let you know she arrived safely. The flight was a bit delayed but everything is fine now. She will call you herself once she gets settled in at the hotel. Take care."
+    },
+    {
+      "id": "S09_SAFE_003",
+      "transcript": "Hello. This is the school office calling. Your son had a minor scrape during recess today. The school nurse cleaned it up and he is perfectly fine. He is back in class. We just wanted to keep you informed. No need to come in."
+    },
+    {
+      "id": "S09_SAFE_004",
+      "transcript": "Hey, it is your brother. I wanted to give you a heads-up that I will be visiting next weekend with the kids. Let me know if Saturday works for you. No rush, just let me know when you get a chance. Talk soon."
+    },
+    {
+      "id": "S09_SAFE_005",
+      "transcript": "Hi, this is the front desk at Sunrise Assisted Living. We are calling to let you know that your father is in good spirits today. He had a nice lunch and went for a walk in the garden. No concerns to report. Have a lovely evening."
+    },
+    {
+      "id": "S09_SUSP_001",
+      "transcript": "Oh my God, you have to help me. I am in trouble. I was in an accident and I am at the hospital. Please do not tell mom and dad yet. I need your help right away. Please just listen to what I tell you."
+    },
+    {
+      "id": "S09_SUSP_002",
+      "transcript": "Hello, I am a police officer. Your grandchild has been involved in a traffic accident and is being treated at the hospital. The situation is serious. I need you to stay on the phone so we can coordinate. Please do not panic, but do act quickly."
+    },
+    {
+      "id": "S09_SUSP_003",
+      "transcript": "This is an emergency. Your nephew has been detained at the airport and needs your help urgently. He asked me to call you because he cannot reach anyone else. Please do not hang up. Time is critical."
+    },
+    {
+      "id": "S09_SUSP_004",
+      "transcript": "Hi, it is me. I lost my phone and I am calling from someone else's phone. Something happened and I am really scared. I cannot explain everything right now but I need you to stay on the line and not call anyone. Please just trust me."
+    },
+    {
+      "id": "S09_SUSP_005",
+      "transcript": "Hello, I am a lawyer representing your daughter. She has been involved in an incident and is at the police station. She is not hurt, but the situation is delicate. I need to speak with you privately before anything goes further."
+    },
+    {
+      "id": "S09_VISH_001",
+      "transcript": "Please, you have to help me. I am your grandson and I was arrested. I need bail money, five thousand euros. Please go to the bank and wire it to this account right now. Do not tell anyone or it will make things worse for me."
+    },
+    {
+      "id": "S09_VISH_002",
+      "transcript": "Hello, I am a police officer. Your relative has caused an accident and is in custody. To prevent charges from being filed, you must post bail immediately. Please transfer eight thousand euros to the court's account. I will give you the details. Do not discuss this with others."
+    },
+    {
+      "id": "S09_VISH_003",
+      "transcript": "This is the hospital. Your niece was admitted after an accident and needs an emergency procedure. The insurance company is not responding. We need a deposit of two thousand euros by credit card to proceed with the surgery. Please provide your card details now."
+    },
+    {
+      "id": "S09_VISH_004",
+      "transcript": "It is me, your nephew. I am in serious trouble. A lawyer told me I need to pay a fine right now or I will go to jail. Can you buy three thousand euros in Google Play gift cards and read me the codes? Please, I am begging you. Do not tell anyone."
+    },
+    {
+      "id": "S09_VISH_005",
+      "transcript": "Hello, I am a notary handling an inheritance case involving your late uncle. There is a large sum of money waiting for you, but to release the funds, you must pay a processing fee of one thousand euros. Please wire the fee to this account today or the claim will expire."
+    },
+    {
+      "id": "S10_SAFE_001",
+      "transcript": "Hello, this is StreamPlus. We are calling to let you know that your monthly subscription has been renewed. Your next billing date is the first of next month. If you have questions about your plan, visit our help center. Thank you for being a subscriber."
+    },
+    {
+      "id": "S10_SAFE_002",
+      "transcript": "Hi, this is StreamPlus support. We noticed you recently changed your password. If this was you, no action is needed. If you did not make this change, please contact our support team through the app. Have a good day."
+    },
+    {
+      "id": "S10_SAFE_003",
+      "transcript": "Good morning. StreamPlus here. We are adding new content to your plan at no extra cost starting next month. We just wanted to give you a heads-up. Enjoy the new shows and thanks for being with us."
+    },
+    {
+      "id": "S10_SAFE_004",
+      "transcript": "Hello, this is StreamPlus. The free trial you signed up for will end in three days. After that, your plan will begin at nine ninety-nine per month. You can cancel any time through the app. No strings attached."
+    },
+    {
+      "id": "S10_SAFE_005",
+      "transcript": "Hi, StreamPlus customer service. Your recent payment did not go through, which can happen if your card expired. Please update your payment method in the app at your convenience. Your service will continue for seven more days. No rush."
+    },
+    {
+      "id": "S10_SUSP_001",
+      "transcript": "This is StreamPlus. Your account has been flagged for a terms-of-service violation. If you do not respond within the next hour, your account will be permanently banned and you will lose all your saved content. Please follow my instructions now."
+    },
+    {
+      "id": "S10_SUSP_002",
+      "transcript": "Hello, I am calling from StreamPlus billing. There is a suspicious charge of four hundred euros on your account. If you did not authorize this, we need to act immediately to reverse it. Please stay on the line."
+    },
+    {
+      "id": "S10_SUSP_003",
+      "transcript": "Attention StreamPlus user. Your subscription payment has been declined and your account is about to be suspended. You will lose access to all your purchased content. To prevent this, you must resolve the payment issue today."
+    },
+    {
+      "id": "S10_SUSP_004",
+      "transcript": "This is StreamPlus security. Someone from a foreign country has logged into your account. They may be using your payment information. Do not log into your account until we secure it. I will guide you through the recovery process now."
+    },
+    {
+      "id": "S10_SUSP_005",
+      "transcript": "Hello. StreamPlus here. Due to a system error, you were double-charged this month. We are processing a refund, but we need to verify your identity first. The refund will expire if not claimed today. Please cooperate with our verification process."
+    },
+    {
+      "id": "S10_VISH_001",
+      "transcript": "This is StreamPlus. To reverse the unauthorized charge on your account, I need to verify your payment information. Please provide your credit card number, expiry date, and CVV so I can process the refund immediately."
+    },
+    {
+      "id": "S10_VISH_002",
+      "transcript": "Hello, StreamPlus security department. Your account has been hacked. To recover it, I need your login email and password right now. Also please read me the two-factor code from your authenticator app so we can lock out the hacker."
+    },
+    {
+      "id": "S10_VISH_003",
+      "transcript": "This is StreamPlus billing. Your account has a negative balance and will go to a collection agency unless you pay the outstanding amount of one hundred fifty euros. Please purchase a prepaid Visa card for that amount and read me the card number."
+    },
+    {
+      "id": "S10_VISH_004",
+      "transcript": "I am from StreamPlus tech support. There is a problem with your account that I can only fix by accessing your device remotely. Please download TeamViewer and share the connection ID and password with me. This needs to happen now before your data is compromised."
+    },
+    {
+      "id": "S10_VISH_005",
+      "transcript": "Hello, this is StreamPlus. You have won a free lifetime premium subscription. To claim it, we just need your full name, date of birth, and the credit card number we should register for the account. This offer expires in ten minutes."
+    }
+  ]
+}
